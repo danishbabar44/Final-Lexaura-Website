@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --midnight-indigo: #020410;
+  --deep-slate: #0A0A0B;
+  --electric-purple: #6366f1;
+  --electric-purple-bright: #818cf8;
+  --deep-indigo: #312E81;
+  --liquid-chrome: #F8FAFC;
+  --slate-grey: #94A3B8;
+  --ghost-white: #F1F5F9;
+  --pure-white: #FFFFFF;
+  --silver: #E2E8F0;
+}
+
+body {
+  background: var(--midnight-indigo);
+  color: var(--pure-white);
+  font-family: var(--font-inter), sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 15% 85%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+}
+
+::selection {
+  background: #6366f1;
+  color: #020410;
+}
+
+.edgeless-panel {
+  mask-image: radial-gradient(circle at center, black 5%, transparent 25%);
+}
