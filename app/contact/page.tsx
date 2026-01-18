@@ -7,6 +7,7 @@ import { Clock, MapPin } from 'lucide-react';
 export default function ContactPage() {
   const [dubaiTime, setDubaiTime] = useState('');
   const [canadaTime, setCanadaTime] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     const updateTime = () => {
@@ -33,8 +34,32 @@ export default function ContactPage() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setShowPopup(true);
+    setTimeout(() => setShowPopup(false), 3000);
+  };
+
   return (
     <div className="min-h-screen">
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/50">
+          <div className="bg-[#0B0C10] border border-[#1E2130] p-8 max-w-md mx-4 rounded-lg shadow-2xl">
+            <h3 className="font-manrope text-xl font-bold text-[#F3F4F6] mb-4">
+              Message Sent!
+            </h3>
+            <p className="font-inter text-sm text-[#9CA3AF] mb-6">
+              Thank you for your inquiry. We'll be in touch with you shortly to discuss your strategy session.
+            </p>
+            <button
+              onClick={() => setShowPopup(false)}
+              className="w-full px-6 py-3 bg-[#F3F4F6] text-[#050507] font-manrope text-[11px] font-semibold tracking-[0.3em] uppercase hover:bg-[#E5E7EB] transition-colors duration-300"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
         <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/20 via-transparent to-electric-cyan/10" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-electric-cyan/20  blur-3xl pointer-events-none" />
@@ -43,9 +68,9 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="font-clash text-5xl md:text-7xl lg:text-8xl text-pure-white mb-8 font-semibold"
+              className="font-clash text-5xl md:text-7xl lg:text-8xl text-pure-white mb-8 font-semibold uppercase"
             >
-              Begin Your Strategy Session.
+              BEGIN YOUR STRATEGY SESSION.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -74,7 +99,7 @@ export default function ContactPage() {
                 </p>
 
                 <div className="bg-white/[0.01] backdrop-blur-2xl border border-white/[0.05]  p-8">
-                  <form className="space-y-6">
+                  <form className="space-y-6" onSubmit={handleSubmit}>
                     <div>
                       <label className="block font-inter text-xs text-slate-grey tracking-[0.4em] uppercase font-bold mb-3">
                         Name
@@ -128,7 +153,7 @@ export default function ContactPage() {
                     </div>
                     <button
                       type="submit"
-                      className="w-full py-4 bg-electric-cyan hover:bg-electric-cyan/90 text-obsidian font-semibold  transition-colors font-inter text-center tracking-[0.4em] uppercase text-xs font-bold"
+                      className="w-full py-4 bg-electric-cyan hover:bg-electric-cyan/90 text-obsidian font-semibold border-2 border-electric-cyan transition-colors font-inter text-center tracking-[0.4em] uppercase text-xs font-bold"
                     >
                       Send Message
                     </button>

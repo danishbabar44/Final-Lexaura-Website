@@ -132,7 +132,7 @@ function ServiceBlock({ service, index }: { service: typeof services[0]; index: 
   const isEven = index % 2 === 0;
 
   return (
-    <div className="py-16 relative z-10">
+    <div className="py-16 relative z-10 border-b border-[#1E2130]">
       <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12 items-center`}>
         {/* Text Side */}
         <div className="flex-1 relative">

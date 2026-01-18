@@ -117,12 +117,12 @@ export default function Footer() {
             </div>
             <ul className="space-y-4">
               <li>
-                <Link href="/privacy" className="font-inter text-base text-[#111111] hover:text-[#666666] transition-colors">
+                <Link href="/privacy" className="font-inter text-base text-[#F3F4F6] hover:text-[#9CA3AF] transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="font-inter text-base text-[#111111] hover:text-[#666666] transition-colors">
+                <Link href="/terms" className="font-inter text-base text-[#F3F4F6] hover:text-[#9CA3AF] transition-colors">
                   Terms of Service
                 </Link>
               </li>

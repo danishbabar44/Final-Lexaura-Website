@@ -1,6 +1,18 @@
 {
   "app": {
+    "[project]/Library/Mobile Documents/com~apple~CloudDocs/lexaura-clean/Final Lexaura Website/lexaura-luxury/app/about/page": [
+      "static/media/a343f882a40d2cc9-s.p.71e1367e.woff2",
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2"
+    ],
+    "[project]/Library/Mobile Documents/com~apple~CloudDocs/lexaura-clean/Final Lexaura Website/lexaura-luxury/app/contact/page": [
+      "static/media/a343f882a40d2cc9-s.p.71e1367e.woff2",
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2"
+    ],
     "[project]/Library/Mobile Documents/com~apple~CloudDocs/lexaura-clean/Final Lexaura Website/lexaura-luxury/app/page": [
+      "static/media/a343f882a40d2cc9-s.p.71e1367e.woff2",
+      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2"
+    ],
+    "[project]/Library/Mobile Documents/com~apple~CloudDocs/lexaura-clean/Final Lexaura Website/lexaura-luxury/app/services/page": [
       "static/media/a343f882a40d2cc9-s.p.71e1367e.woff2",
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2"
     ]

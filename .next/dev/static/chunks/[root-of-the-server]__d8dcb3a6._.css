@@ -870,6 +870,11 @@ img, video {
   margin-right: auto;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mb-1 {
   margin-bottom: .25rem;
 }
@@ -1108,6 +1113,10 @@ img, video {
 
 .max-w-7xl {
   max-width: 80rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
 }
 
 .flex-1 {
@@ -1430,6 +1439,10 @@ img, video {
 
 .bg-white\/\[0\.02\] {
   background-color: #ffffff05;
+}
+
+.bg-black\/50 {
+  background-color: #00000080;
 }
 
 .bg-gradient-to-br {
